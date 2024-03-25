@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>КАЛЕНДАРЬ ПРОЕКТА</title>
+</head>
+<body>
+<h1>КАЛЕНДАРЬ ПРОЕКТА</h1>
+<hr>
+<div th:class="Calendar">
+    <h2>Создать новый календарь</h2>
+    <form action="#" th:method="POST" th:action="@{/oil_pad_object/backfill_well/create}" th:object="${dataFormOilPad}">
+
+        <div id="contractClass">
+            <h3>Договор </h3>
+            <label for="code">Шифр: </label>
+            <input type="text" th:field="*{codeContract}" id="code"/>
+            <span style="color: red" th:if="${#fields.hasErrors('codeContract')}" th:errors="*{codeContract}">CodeContract error</span><br><br>
+            <h3> Дата работ </h3>
+            <label for="starting">Дата начала выполнения: </label>
+            <input type="date" th:field="*{startContract}" id="starting"/>
+            <span style="color: red" th:if="${#fields.hasErrors('startContract')}" th:errors="*{startContract}">StartContract error</span><br><br>
+        </div>
+
+        <div id="backfillWellClass">
+            <h3> Инженерная подготовка кустовой площадки </h3>
+            <label for="activeBackfillWell">Наличие: </label>
+            <input type="checkbox" th:field="*{backfillWell.active}" id="activeBackfillWell"/><br>
+            <label for="well">Количество скважин, шт.: </label>
+            <input type="number" step="any" th:field="*{backfillWell.well}" id="well"/>
+            <span style="color: red" th:if="${#fields.hasErrors('backfillWell.well')}" th:errors="*{backfillWell.well}">Well error</span><br>
+            <label for="stageBackfillWell">Этап проектирования (строительства): </label>
+            <input type="number" step="any" th:field="*{backfillWell.stage}" id="stageBackfillWell"/><br><br>
+        </div>
+
+        <div id="roadClass">
+            <h3> Автомобильная дорога </h3>
+            <label for="activeRoad">Наличие: </label>
+            <input type="checkbox" th:field="*{road.active}" id="activeRoad"/><br>
+            <label for="category">Категория дороги: </label>
+            <input type="text" th:field="*{road.category}" id="category"/><br>
+            <label for="lengthRoad">Протяженность дорог, км: </label>
+            <input type="number" step="any" th:field="*{road.length}" id="lengthRoad"/><br>
+            <label for="stageRoad">Этап проектирования (строительства): </label>
+            <input type="number" step="any" th:field="*{road.stage}" id="stageRoad"/><br><br>
+        </div>
+        <div>
+            <h3> Линия электропередач </h3>
+            <label for="activeLine">Наличие: </label>
+            <input type="checkbox" th:field="*{line.active}" id="activeLine"/><br>
+            <label for="power">Мощность ВЛ, кВ: </label>
+            <input type="text" th:field="*{line.power}" id="power"/><br>
+            <label for="lengthLine">Протяженность ВЛ, км: </label>
+            <input type="number" step="any" th:field="*{line.length}" id="lengthLine"/><br>
+            <label for="stageLine">Этап проектирования (строительства): </label>
+            <input type="number" step="any" th:field="*{line.stage}" id="stageLine"/><br><br>
+        </div>
+        <div>
+            <h3> Мобильная установка подготовки нефти</h3>
+            <label for="activeMupn">Наличие: </label>
+            <input type="checkbox" th:field="*{mupn.active}" id="activeMupn"/><br>
+            <label for="squareMupn">Площадь отсыпки, га: </label>
+            <input type="number" step="any" th:field="*{mupn.square}" id="squareMupn"/><br>
+            <label for="stageMupn">Этап проектирования (строительства): </label>
+            <input type="number" step="any" th:field="*{mupn.stage}" id="stageMupn"/><br><br><br>
+        </div>
+        <div>
+            <h3> Площадка под временный энергоцентр</h3>
+            <label for="activeVec">Наличие: </label>
+            <input type="checkbox" th:field="*{vec.active}" id="activeVec"/><br>
+            <label for="squareVec">Площадь отсыпки, га: </label>
+            <input type="number" step="any" th:field="*{vec.square}" id="squareVec"/><br>
+            <label for="stageVec">Этап проектирования (строительства): </label>
+            <input type="number" step="any" th:field="*{vec.stage}" id="stageVec"/><br><br><br>
+        </div>
+        <div>
+            <h3> Вертолетная посадочная площадка</h3>
+            <label for="activeVvp">Наличие: </label>
+            <input type="checkbox" th:field="*{vvp.active}" id="activeVvp"/><br>
+            <label for="helicopterModelVvp">Модель вертолета для посадки: </label>
+            <input type="text" th:field="*{vvp.helicopterModel}" id="helicopterModelVvp"/><br>
+            <label for="squareVvp">Площадь отсыпки, га: </label>
+            <input type="number" step="any" th:field="*{vvp.square}" id="squareVvp"/><br>
+            <label for="activeHallExist">Наличие зала ожидания: </label>
+            <input type="checkbox" th:field="*{vvp.hallExist}" id="activeHallExist"/><br>
+            <label for="stageVvp">Этап проектирования (строительства): </label>
+            <input type="number" step="any" th:field="*{vvp.stage}" id="stageVvp"/><br><br><br>
+        </div>
+        <!--    <input type="hidden" name="_csrf" value="${_csrf.token}">-->
+        <input type="submit" value="Сгенерировать календарь"/><br><br><br>
+    </form>
+</div>
+</body>
+</html>
