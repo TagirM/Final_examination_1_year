@@ -22,6 +22,17 @@
             <span style="color: red" th:if="${#fields.hasErrors('startContract')}" th:errors="*{startContract}">StartContract error</span><br><br>
         </div>
 
+        <div id="engineeringSurvey">
+            <h3> Инженерные изыскания </h3>
+            <label for="totalEngineeringSurvey">Выполняются полевые и камеральные инженерные изыскания: </label>
+            <input type="checkbox" th:field="*{totalEngineeringSurvey}" id="totalEngineeringSurvey"/><br>
+            <label for="drillingRig">&nbsp;&nbsp;&nbsp;&nbsp;Сколько буровых бригад планируется использовать, шт.: </label>
+            <input type="number" step="any" th:field="*{drillingRig}" id="drillingRig"/>
+            <span style="color: red" th:if="${#fields.hasErrors('drillingRig')}" th:errors="*{drillingRig}">drillingRig error</span><br>
+            <label for="engineeringSurveyReport">Выполняются только камеральные инженерные изыскания: </label>
+            <input type="checkbox" th:field="*{engineeringSurveyReport}" id="engineeringSurveyReport"/><br>
+        </div>
+
         <div id="backfillWellClass">
             <h3> Инженерная подготовка кустовой площадки </h3>
             <label for="activeBackfillWell">Наличие: </label>
@@ -30,7 +41,8 @@
             <input type="number" step="any" th:field="*{backfillWell.well}" id="well"/>
             <span style="color: red" th:if="${#fields.hasErrors('backfillWell.well')}" th:errors="*{backfillWell.well}">Well error</span><br>
             <label for="stageBackfillWell">Этап проектирования (строительства): </label>
-            <input type="number" step="any" th:field="*{backfillWell.stage}" id="stageBackfillWell"/><br><br>
+            <input type="number" step="any" th:field="*{backfillWell.stage}" id="stageBackfillWell"/>
+            <span style="color: red" th:if="${#fields.hasErrors('backfillWell.stage')}" th:errors="*{backfillWell.stage}">Well error</span><br><br>
         </div>
 
         <div id="roadClass">
@@ -38,55 +50,105 @@
             <label for="activeRoad">Наличие: </label>
             <input type="checkbox" th:field="*{road.active}" id="activeRoad"/><br>
             <label for="category">Категория дороги: </label>
-            <input type="text" th:field="*{road.category}" id="category"/><br>
+            <input type="text" th:field="*{road.category}" id="category"/>
+            <span style="color: red" th:if="${#fields.hasErrors('road.category')}" th:errors="*{road.category}">Well error</span><br>
             <label for="lengthRoad">Протяженность дорог, км: </label>
-            <input type="number" step="any" th:field="*{road.length}" id="lengthRoad"/><br>
+            <input type="number" step="any" th:field="*{road.length}" id="lengthRoad"/>
+            <span style="color: red" th:if="${#fields.hasErrors('road.length')}" th:errors="*{road.length}">Well error</span><br>
+            <label for="bridgeExistRoad">Наличие дорожного моста: </label>
+            <input type="checkbox" th:field="*{road.bridgeExist}" id="bridgeExistRoad"/><br>
+                <label for="bridgeRoadCount">&nbsp;&nbsp;&nbsp;&nbsp;Количество мостов, шт: </label>
+                <input type="number" step="any" th:field="*{road.bridgeRoadCount}" id="bridgeRoadCount"/>
+                <span style="color: red" th:if="${#fields.hasErrors('road.bridgeRoadCount')}" th:errors="*{road.bridgeRoadCount}">Well error</span><br>
+                <label for="bridgeRoadLength">&nbsp;&nbsp;&nbsp;&nbsp;Общая протяженность мостов, м: </label>
+                <input type="number" step="any" th:field="*{road.bridgeRoadLength}" id="bridgeRoadLength"/>
+                <span style="color: red" th:if="${#fields.hasErrors('road.bridgeRoadLength')}" th:errors="*{road.bridgeRoadLength}">Well error</span><br>
             <label for="stageRoad">Этап проектирования (строительства): </label>
-            <input type="number" step="any" th:field="*{road.stage}" id="stageRoad"/><br><br>
+            <input type="number" step="any" th:field="*{road.stage}" id="stageRoad"/>
+            <span style="color: red" th:if="${#fields.hasErrors('road.stage')}" th:errors="*{road.stage}">Well error</span><br><br>
         </div>
         <div>
             <h3> Линия электропередач </h3>
             <label for="activeLine">Наличие: </label>
             <input type="checkbox" th:field="*{line.active}" id="activeLine"/><br>
             <label for="power">Мощность ВЛ, кВ: </label>
-            <input type="text" th:field="*{line.power}" id="power"/><br>
+            <input type="text" th:field="*{line.power}" id="power"/>
+            <span style="color: red" th:if="${#fields.hasErrors('line.power')}" th:errors="*{line.power}">Well error</span><br>
             <label for="lengthLine">Протяженность ВЛ, км: </label>
-            <input type="number" step="any" th:field="*{line.length}" id="lengthLine"/><br>
+            <input type="number" step="any" th:field="*{line.length}" id="lengthLine"/>
+            <span style="color: red" th:if="${#fields.hasErrors('line.length')}" th:errors="*{line.length}">Well error</span><br>
             <label for="stageLine">Этап проектирования (строительства): </label>
-            <input type="number" step="any" th:field="*{line.stage}" id="stageLine"/><br><br>
+            <input type="number" step="any" th:field="*{line.stage}" id="stageLine"/>
+            <span style="color: red" th:if="${#fields.hasErrors('line.stage')}" th:errors="*{line.stage}">Well error</span><br><br>
         </div>
         <div>
             <h3> Мобильная установка подготовки нефти</h3>
             <label for="activeMupn">Наличие: </label>
             <input type="checkbox" th:field="*{mupn.active}" id="activeMupn"/><br>
             <label for="squareMupn">Площадь отсыпки, га: </label>
-            <input type="number" step="any" th:field="*{mupn.square}" id="squareMupn"/><br>
+            <input type="number" step="any" th:field="*{mupn.square}" id="squareMupn"/>
+            <span style="color: red" th:if="${#fields.hasErrors('mupn.square')}" th:errors="*{mupn.square}">Well error</span><br>
             <label for="stageMupn">Этап проектирования (строительства): </label>
-            <input type="number" step="any" th:field="*{mupn.stage}" id="stageMupn"/><br><br><br>
+            <input type="number" step="any" th:field="*{mupn.stage}" id="stageMupn"/>
+            <span style="color: red" th:if="${#fields.hasErrors('mupn.stage')}" th:errors="*{mupn.stage}">Well error</span><br><br>
         </div>
         <div>
             <h3> Площадка под временный энергоцентр</h3>
             <label for="activeVec">Наличие: </label>
             <input type="checkbox" th:field="*{vec.active}" id="activeVec"/><br>
             <label for="squareVec">Площадь отсыпки, га: </label>
-            <input type="number" step="any" th:field="*{vec.square}" id="squareVec"/><br>
+            <input type="number" step="any" th:field="*{vec.square}" id="squareVec"/>
+            <span style="color: red" th:if="${#fields.hasErrors('vec.square')}" th:errors="*{vec.square}">Well error</span><br>
             <label for="stageVec">Этап проектирования (строительства): </label>
-            <input type="number" step="any" th:field="*{vec.stage}" id="stageVec"/><br><br><br>
+            <input type="number" step="any" th:field="*{vec.stage}" id="stageVec"/>
+            <span style="color: red" th:if="${#fields.hasErrors('vec.stage')}" th:errors="*{vec.stage}">Well error</span><br><br>
         </div>
         <div>
             <h3> Вертолетная посадочная площадка</h3>
             <label for="activeVvp">Наличие: </label>
             <input type="checkbox" th:field="*{vvp.active}" id="activeVvp"/><br>
             <label for="helicopterModelVvp">Модель вертолета для посадки: </label>
-            <input type="text" th:field="*{vvp.helicopterModel}" id="helicopterModelVvp"/><br>
+            <input type="text" th:field="*{vvp.helicopterModel}" id="helicopterModelVvp"/>
+            <span style="color: red" th:if="${#fields.hasErrors('vvp.helicopterModel')}" th:errors="*{vvp.helicopterModel}">Well error</span><br>
             <label for="squareVvp">Площадь отсыпки, га: </label>
-            <input type="number" step="any" th:field="*{vvp.square}" id="squareVvp"/><br>
+            <input type="number" step="any" th:field="*{vvp.square}" id="squareVvp"/>
+            <span style="color: red" th:if="${#fields.hasErrors('vvp.square')}" th:errors="*{vvp.square}">Well error</span><br>
             <label for="activeHallExist">Наличие зала ожидания: </label>
             <input type="checkbox" th:field="*{vvp.hallExist}" id="activeHallExist"/><br>
             <label for="stageVvp">Этап проектирования (строительства): </label>
-            <input type="number" step="any" th:field="*{vvp.stage}" id="stageVvp"/><br><br><br>
+            <input type="number" step="any" th:field="*{vvp.stage}" id="stageVvp"/>
+            <span style="color: red" th:if="${#fields.hasErrors('vvp.stage')}" th:errors="*{vvp.stage}">Well error</span><br><br>
+        </div>
+        <div>
+            <h3> Кабельная эстакада </h3>
+            <label for="activeCableRack">Наличие: </label>
+            <input type="checkbox" th:field="*{cableRack.active}" id="activeCableRack"/><br>
+            <label for="lengthCableRack">Протяженность кабельной эстакады, м: </label>
+            <input type="number" step="any" th:field="*{cableRack.length}" id="lengthCableRack"/>
+            <span style="color: red" th:if="${#fields.hasErrors('cableRack.length')}" th:errors="*{cableRack.length}">Well error</span><br>
+            <label for="stageCableRack">Этап проектирования (строительства): </label>
+            <input type="number" step="any" th:field="*{cableRack.stage}" id="stageCableRack"/>
+            <span style="color: red" th:if="${#fields.hasErrors('cableRack.stage')}" th:errors="*{cableRack.stage}">Well error</span><br><br>
+        </div>
+        <div>
+            <h3> Площадка под вахтовый жилой комплекс</h3>
+            <label for="activeVjk">Наличие: </label>
+            <input type="checkbox" th:field="*{vjk.active}" id="activeVjk"/><br>
+            <label for="squareVjk">Площадь отсыпки, га: </label>
+            <input type="number" step="any" th:field="*{vjk.square}" id="squareVjk"/>
+            <span style="color: red" th:if="${#fields.hasErrors('vjk.square')}" th:errors="*{vjk.square}">Well error</span><br>
+            <label for="stageVjk">Этап проектирования (строительства): </label>
+            <input type="number" step="any" th:field="*{vjk.stage}" id="stageVjk"/>
+            <span style="color: red" th:if="${#fields.hasErrors('vjk.stage')}" th:errors="*{vjk.stage}">Well error</span><br><br>
         </div>
         <!--    <input type="hidden" name="_csrf" value="${_csrf.token}">-->
+
+        <div id="humanFactor">
+            <label for="humanFactorId">Укажите человеческий фактор при формировании сроков календарного плана, %: </label>
+            <input type="text" th:field="*{humanFactor}" id="humanFactorId"/>
+            <span style="color: red" th:if="${#fields.hasErrors('humanFactor')}" th:errors="*{humanFactor}">humanFactor error</span><br><br>
+        </div>
+
         <input type="submit" value="Сгенерировать календарь"/><br><br><br>
     </form>
 </div>

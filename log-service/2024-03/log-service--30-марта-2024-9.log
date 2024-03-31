@@ -1,0 +1,257 @@
+2024-03-30T18:14:02.914+0700 INFO info message
+2024-03-30T18:14:02.930+0700 ERROR info message
+2024-03-30T18:14:02.993+0700 INFO info message
+2024-03-30T18:14:02.993+0700 ERROR info message
+2024-03-30T18:14:03.180+0700 INFO HV000001: Hibernate Validator 8.0.1.Final
+2024-03-30T18:14:03.201+0700 INFO Starting Main using Java 19.0.1 with PID 11184 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-03-30T18:14:03.201+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-03-30T18:14:03.243+0700 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-30T18:14:03.243+0700 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-30T18:14:03.737+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-30T18:14:03.815+0700 INFO Finished Spring Data repository scanning in 67 ms. Found 8 JPA repository interfaces.
+2024-03-30T18:14:04.174+0700 INFO Tomcat initialized with port 8080 (http)
+2024-03-30T18:14:04.174+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-30T18:14:04.190+0700 INFO Starting service [Tomcat]
+2024-03-30T18:14:04.190+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-30T18:14:04.221+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-03-30T18:14:04.221+0700 INFO Root WebApplicationContext: initialization completed in 978 ms
+2024-03-30T18:14:04.253+0700 INFO HikariPool-1 - Starting...
+2024-03-30T18:14:04.315+0700 INFO HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-03-30T18:14:04.315+0700 INFO HikariPool-1 - Start completed.
+2024-03-30T18:14:04.331+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-03-30T18:14:04.424+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-30T18:14:04.456+0700 INFO HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-30T18:14:04.487+0700 INFO HHH000026: Second-level cache disabled
+2024-03-30T18:14:04.596+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-30T18:14:04.627+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-30T18:14:05.284+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-30T18:14:05.331+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T18:14:05.690+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-30T18:14:05.706+0700 INFO Adding welcome page template: index
+2024-03-30T18:14:05.940+0700 INFO LiveReload server is running on port 35729
+2024-03-30T18:14:05.956+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-03-30T18:14:05.971+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-03-30T18:14:05.987+0700 INFO Started Main in 2.979 seconds (process running for 3.758)
+2024-03-30T18:14:17.363+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-30T18:14:17.363+0700 INFO Initializing Servlet 'dispatcherServlet'
+2024-03-30T18:14:17.364+0700 INFO Completed initialization in 1 ms
+2024-03-30T18:14:26.094+0700 INFO Эта запись будет залогирована тоже
+2024-03-30T18:14:26.200+0700 INFO Эта запись будет залогирована
+2024-03-30T18:14:49.156+0700 INFO Эта запись будет залогирована тоже
+2024-03-30T18:14:49.174+0700 INFO Эта запись будет залогирована
+2024-03-30T18:18:43.318+0700 INFO Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-03-30T18:18:43.318+0700 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2024-03-30T18:18:43.333+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T18:18:43.349+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-03-30T18:18:43.349+0700 INFO HikariPool-1 - Shutdown initiated...
+2024-03-30T18:18:43.349+0700 INFO HikariPool-1 - Shutdown completed.
+2024-03-30T18:18:43.380+0700 INFO info message
+2024-03-30T18:18:43.380+0700 ERROR info message
+2024-03-30T18:18:43.412+0700 INFO Starting Main using Java 19.0.1 with PID 11184 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-03-30T18:18:43.412+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-03-30T18:18:43.534+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-30T18:18:43.549+0700 WARN Exception encountered during context initialization - cancelling refresh attempt: java.lang.TypeNotPresentException: Type ru.tomsknipineft.entities.linearObjects.Road not present
+2024-03-30T18:18:43.549+0700 INFO 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-30T18:18:43.565+0700 ERROR Application run failed
+java.lang.TypeNotPresentException: Type ru.tomsknipineft.entities.linearObjects.Road not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[?:?]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[?:?]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[?:?]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[?:?]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[?:?]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[?:?]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[?:?]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[?:?]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1250) ~[?:?]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:517) ~[spring-core-6.1.3.jar:6.1.3]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:465) ~[spring-core-6.1.3.jar:6.1.3]
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:254) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:36) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:77) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:91) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:164) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62) ~[spring-boot-autoconfigure-3.2.2.jar:3.2.2]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:376) ~[spring-context-6.1.3.jar:6.1.3]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[?:?]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:375) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-3.2.2.jar:3.2.2]
+	at ru.tomsknipineft.Main.main(Main.java:20) [classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.2.2.jar:3.2.2]
+Caused by: java.lang.ClassNotFoundException: ru.tomsknipineft.entities.linearObjects.Road
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[?:?]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.2.2.jar:3.2.2]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[?:?]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[?:?]
+	... 39 more
+2024-03-30T18:18:46.021+0700 INFO info message
+2024-03-30T18:18:46.021+0700 ERROR info message
+2024-03-30T18:18:46.037+0700 INFO Starting Main using Java 19.0.1 with PID 11184 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-03-30T18:18:46.037+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-03-30T18:18:46.134+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-30T18:18:46.150+0700 INFO Finished Spring Data repository scanning in 11 ms. Found 8 JPA repository interfaces.
+2024-03-30T18:18:46.212+0700 INFO Tomcat initialized with port 8080 (http)
+2024-03-30T18:18:46.212+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-30T18:18:46.212+0700 INFO Starting service [Tomcat]
+2024-03-30T18:18:46.212+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-30T18:18:46.212+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-03-30T18:18:46.212+0700 INFO Root WebApplicationContext: initialization completed in 175 ms
+2024-03-30T18:18:46.228+0700 INFO HikariPool-2 - Starting...
+2024-03-30T18:18:46.228+0700 INFO HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2024-03-30T18:18:46.228+0700 INFO HikariPool-2 - Start completed.
+2024-03-30T18:18:46.228+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-03-30T18:18:46.275+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-30T18:18:46.275+0700 INFO HHH000026: Second-level cache disabled
+2024-03-30T18:18:46.275+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-30T18:18:46.275+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-30T18:18:46.447+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-30T18:18:46.462+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T18:18:46.681+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-30T18:18:46.681+0700 INFO Adding welcome page template: index
+2024-03-30T18:18:46.744+0700 INFO LiveReload server is running on port 35729
+2024-03-30T18:18:46.759+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-03-30T18:18:46.759+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-03-30T18:18:46.759+0700 INFO Started Main in 0.738 seconds (process running for 284.544)
+2024-03-30T18:18:46.775+0700 INFO Condition evaluation unchanged
+2024-03-30T18:18:50.198+0700 INFO Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-03-30T18:18:50.198+0700 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2024-03-30T18:18:50.198+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T18:18:50.198+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-03-30T18:18:50.198+0700 INFO HikariPool-2 - Shutdown initiated...
+2024-03-30T18:18:50.198+0700 INFO HikariPool-2 - Shutdown completed.
+2024-03-30T18:18:50.245+0700 INFO info message
+2024-03-30T18:18:50.245+0700 ERROR info message
+2024-03-30T18:18:50.276+0700 INFO Starting Main using Java 19.0.1 with PID 11184 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-03-30T18:18:50.276+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-03-30T18:18:50.415+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-30T18:18:50.415+0700 WARN Exception encountered during context initialization - cancelling refresh attempt: java.lang.TypeNotPresentException: Type ru.tomsknipineft.entities.linearObjects.Road not present
+2024-03-30T18:18:50.415+0700 INFO 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-30T18:18:50.415+0700 ERROR Application run failed
+java.lang.TypeNotPresentException: Type ru.tomsknipineft.entities.linearObjects.Road not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[?:?]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[?:?]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[?:?]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[?:?]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[?:?]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[?:?]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[?:?]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[?:?]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1250) ~[?:?]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:517) ~[spring-core-6.1.3.jar:6.1.3]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:465) ~[spring-core-6.1.3.jar:6.1.3]
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:254) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:36) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:77) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:91) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:164) ~[spring-data-commons-3.2.2.jar:3.2.2]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62) ~[spring-boot-autoconfigure-3.2.2.jar:3.2.2]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:376) ~[spring-context-6.1.3.jar:6.1.3]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[?:?]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:375) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-3.2.2.jar:3.2.2]
+	at ru.tomsknipineft.Main.main(Main.java:20) [classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.2.2.jar:3.2.2]
+Caused by: java.lang.ClassNotFoundException: ru.tomsknipineft.entities.linearObjects.Road
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[?:?]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.2.2.jar:3.2.2]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[?:?]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[?:?]
+	... 39 more
+2024-03-30T18:18:52.860+0700 INFO info message
+2024-03-30T18:18:52.860+0700 ERROR info message
+2024-03-30T18:18:52.875+0700 INFO Starting Main using Java 19.0.1 with PID 11184 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-03-30T18:18:52.875+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-03-30T18:18:52.947+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-30T18:18:52.963+0700 INFO Finished Spring Data repository scanning in 10 ms. Found 8 JPA repository interfaces.
+2024-03-30T18:18:53.025+0700 INFO Tomcat initialized with port 8080 (http)
+2024-03-30T18:18:53.025+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-30T18:18:53.025+0700 INFO Starting service [Tomcat]
+2024-03-30T18:18:53.025+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-30T18:18:53.041+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-03-30T18:18:53.041+0700 INFO Root WebApplicationContext: initialization completed in 166 ms
+2024-03-30T18:18:53.056+0700 INFO HikariPool-3 - Starting...
+2024-03-30T18:18:53.056+0700 INFO HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2024-03-30T18:18:53.056+0700 INFO HikariPool-3 - Start completed.
+2024-03-30T18:18:53.056+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-03-30T18:18:53.072+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-30T18:18:53.072+0700 INFO HHH000026: Second-level cache disabled
+2024-03-30T18:18:53.072+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-30T18:18:53.072+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-30T18:18:53.150+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-30T18:18:53.167+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T18:18:53.370+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-30T18:18:53.370+0700 INFO Adding welcome page template: index
+2024-03-30T18:18:53.432+0700 INFO LiveReload server is running on port 35729
+2024-03-30T18:18:53.432+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-03-30T18:18:53.432+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-03-30T18:18:53.448+0700 INFO Started Main in 0.588 seconds (process running for 291.219)
+2024-03-30T18:18:53.448+0700 INFO Condition evaluation unchanged
+2024-03-30T18:18:59.170+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-30T18:18:59.170+0700 INFO Initializing Servlet 'dispatcherServlet'
+2024-03-30T18:18:59.172+0700 INFO Completed initialization in 2 ms
+2024-03-30T18:19:14.739+0700 INFO Эта запись будет залогирована тоже
+2024-03-30T18:19:14.752+0700 INFO Эта запись будет залогирована
+2024-03-30T18:20:17.073+0700 INFO Эта запись будет залогирована тоже
+2024-03-30T18:20:17.083+0700 INFO Эта запись будет залогирована
+2024-03-30T18:20:17.085+0700 INFO Эта запись будет залогирована
+2024-03-30T18:20:17.087+0700 INFO Эта запись будет залогирована
+2024-03-30T18:20:37.600+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T18:20:37.616+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-03-30T18:20:37.616+0700 INFO HikariPool-3 - Shutdown initiated...
+2024-03-30T18:20:37.616+0700 INFO HikariPool-3 - Shutdown completed.

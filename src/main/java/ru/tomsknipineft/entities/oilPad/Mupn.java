@@ -1,18 +1,22 @@
 package ru.tomsknipineft.entities.oilPad;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.group.GroupSequenceProvider;
 import ru.tomsknipineft.entities.EntityProject;
 import ru.tomsknipineft.entities.ObjectType;
+import ru.tomsknipineft.utils.entityValidator.MupnGroupSequenceProvider;
+import ru.tomsknipineft.utils.entityValidator.OnActiveCheck;
 
 /**
  * Площадка МУПН (мобильная установка подготовки нефти)
  */
+@GroupSequenceProvider(MupnGroupSequenceProvider.class)
 @Entity
 @Data
 @NoArgsConstructor
@@ -31,11 +35,12 @@ public class Mupn implements OilPad, EntityProject {
     private ObjectType objectType;
 
     //    площадь отсыпки, га
-    @Positive(message = "Сan not be less than 0")
+    @NotNull(message = "Площадь не заполнена", groups = OnActiveCheck.class)
+    @Positive(message = "Площадь не может быть отрицательной", groups = OnActiveCheck.class)
     private Long square;
 
     //    этап строительства
-    @Min(value = 1, message = "Сan not be less than 1")
+    @Min(value = 1, message = "Не может быть меньше 1", groups = OnActiveCheck.class)
     private Integer stage;
 
     //    необходимые ресурсы, чел/дней

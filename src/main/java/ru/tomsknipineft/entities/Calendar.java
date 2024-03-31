@@ -68,6 +68,9 @@ public class Calendar {
     //    дата создания календарного плана
     private LocalDateTime dateOfCreated;
 
+    // человеческий фактор, %
+    private Integer humanFactor;
+
     @PrePersist
     private void init(){
         dateOfCreated = LocalDateTime.now();

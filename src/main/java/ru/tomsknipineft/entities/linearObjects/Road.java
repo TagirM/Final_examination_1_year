@@ -2,23 +2,30 @@ package ru.tomsknipineft.entities.linearObjects;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.group.GroupSequenceProvider;
 import ru.tomsknipineft.entities.EntityProject;
 import ru.tomsknipineft.entities.ObjectType;
 import ru.tomsknipineft.entities.oilPad.OilPad;
+import ru.tomsknipineft.utils.entityValidator.OnActiveBridgeRoad;
+import ru.tomsknipineft.utils.entityValidator.OnActiveCheck;
+import ru.tomsknipineft.utils.entityValidator.RoadGroupSequenceProvider;
 
 /**
  * Автомобильная дорога
  */
+@GroupSequenceProvider(RoadGroupSequenceProvider.class)
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "roads")
-public class Road extends BridgeRoad  implements OilPad, EntityProject {
+public class Road implements OilPad, EntityProject {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -34,15 +41,28 @@ public class Road extends BridgeRoad  implements OilPad, EntityProject {
     @Column(name = "bridge_exist")
     private boolean bridgeExist;
 
+    @Column(name = "bridge_road_count")
+    @NotNull(message = "Количество не заполнено", groups = OnActiveBridgeRoad.class)
+    @Positive(message = "Количество не может быть отрицательным", groups = OnActiveBridgeRoad.class)
+    private Integer bridgeRoadCount;
+
+    @Column(name = "bridge_road_length")
+    @NotNull(message = "Длина моста не заполнена", groups = OnActiveBridgeRoad.class)
+    @Positive(message = "Длина моста не может быть отрицательной", groups = OnActiveBridgeRoad.class)
+    private Integer bridgeRoadLength;
+
     //    категория дороги
+    @NotNull(message = "Категория не заполнена", groups = OnActiveCheck.class)
+    @Size(min = 1, max = 2, message = "Категория в интервале 1-2 символов", groups = OnActiveCheck.class)
     private String category;
 
     //    протяженность дороги
-    @Positive(message = "Сan not be less than 0")
+    @NotNull(message = "Длина не заполнена", groups = OnActiveCheck.class)
+    @Positive(message = "Длина не может быть отрицательной", groups = OnActiveCheck.class)
     private Integer length;
 
     //    этап строительства
-    @Min(value = 1, message = "Сan not be less than 1")
+    @Min(value = 1, message = "Не может быть меньше 1", groups = OnActiveCheck.class)
     private Integer stage;
 
     //    необходимые ресурсы, чел/дней
@@ -52,5 +72,9 @@ public class Road extends BridgeRoad  implements OilPad, EntityProject {
         this.category = category;
         this.length = length;
         this.resource = resource;
+    }
+
+    public Integer getResourceBridge(){
+        return (bridgeRoadLength/20)*bridgeRoadCount;
     }
 }

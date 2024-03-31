@@ -8,18 +8,18 @@ import ru.tomsknipineft.entities.Calendar;
 import ru.tomsknipineft.entities.EntityProject;
 import ru.tomsknipineft.entities.ObjectType;
 import ru.tomsknipineft.entities.areaObjects.Vec;
+import ru.tomsknipineft.entities.areaObjects.Vjk;
 import ru.tomsknipineft.entities.areaObjects.Vvp;
+import ru.tomsknipineft.entities.linearObjects.CableRack;
 import ru.tomsknipineft.entities.linearObjects.Line;
 import ru.tomsknipineft.entities.linearObjects.Road;
 import ru.tomsknipineft.entities.oilPad.BackfillWell;
 import ru.tomsknipineft.entities.oilPad.Mupn;
 import ru.tomsknipineft.repositories.CalendarRepository;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Класс с бизнес-логикой расчета сроков календарного плана договора из входных данных
@@ -43,6 +43,10 @@ public class CalendarService {
 
     private final LineService lineService;
 
+    private final CableRackService cableRackService;
+
+    private final VjkService vjkService;
+
     private static final Logger logger = LogManager.getLogger(CalendarService.class);
 
     /**
@@ -61,15 +65,37 @@ public class CalendarService {
      * @param codeContract шифр договора
      * @param startContract дата начала работ
      */
-    public void createCalendar(List<Integer> getDurationsProject, String codeContract, LocalDate startContract) {
+    public void createCalendar(List<Integer> getDurationsProject, String codeContract, LocalDate startContract, Integer humanFactor,
+                               boolean totalEngineeringSurvey, boolean engineeringSurveyReport, Integer drillingRig) {
         int nextStage = 0;
+        int engineeringSurveyDuration = 0;
+        int engineeringSurveyReportDuration = 0;
+        int agreementEngineeringSurveyDuration = 0;
+
+        if (totalEngineeringSurvey && engineeringSurveyReport){
+            engineeringSurveyReport = false;
+        }
+        if (engineeringSurveyReport){
+            engineeringSurveyReportDuration = 45;
+            agreementEngineeringSurveyDuration = engineeringSurveyReportDuration + 60;
+        }
+        if (totalEngineeringSurvey){
+            engineeringSurveyDuration = 10 + 20/drillingRig;
+            engineeringSurveyReportDuration = engineeringSurveyDuration + 90;
+            agreementEngineeringSurveyDuration = engineeringSurveyReportDuration + 60;
+        }
         for (int i = 0; i < getDurationsProject.size(); i++) {
+            // расчет количества рабочих дней с учетом человеческого фактора
+            int durationsProjectWithHumanFactor = (getDurationsProject.get(i) * (humanFactor+100))/100;
+
+            // расчет календарных дней из рабочих дней в каждом этапе строительства
+            int calendarDaysDurationsProject = durationsProjectWithHumanFactor + (durationsProjectWithHumanFactor/5)*2;
+
             Calendar calendar = new Calendar();
+            // смещение начала текущего этапа строительства на срок полевых ИИ предыдущего этапа строительства
             startContract = startContract.plusDays(nextStage);
-            int engineeringSurveyDuration = 30;
-            int engineeringSurveyReportDuration = engineeringSurveyDuration + 90;
-            int agreementEngineeringSurveyDuration = engineeringSurveyReportDuration + 60;
-            int workingDuration = getDurationsProject.get(i) + engineeringSurveyReportDuration;
+
+            int workingDuration = calendarDaysDurationsProject + engineeringSurveyReportDuration;
             int projectDuration = workingDuration + 30;
             int estimatesDuration = workingDuration + 30;
             int landDuration = projectDuration + 150;
@@ -78,19 +104,20 @@ public class CalendarService {
             int agreementEstimatesDuration = estimatesDuration + 60;
             int examinationDuration = agreementProjectDuration + 90;
 
-            calendar.setCodeContract(codeContract).setStartContract(startContract)
+            calendar.setCodeContract(codeContract).setStartContract(workDay(startContract))
                     .setStage(i+1)
-                    .setEngineeringSurvey(startContract.plusDays(engineeringSurveyDuration))
-                    .setEngineeringSurveyReport(startContract.plusDays(engineeringSurveyReportDuration))
-                    .setAgreementEngineeringSurvey(startContract.plusDays(agreementEngineeringSurveyDuration))
-                    .setWorkingFinish(startContract.plusDays(workingDuration))
-                    .setEstimatesFinish(startContract.plusDays(estimatesDuration))
-                    .setProjectFinish(startContract.plusDays(projectDuration))
-                    .setLandFinish(startContract.plusDays(landDuration))
-                    .setAgreementWorking(startContract.plusDays(agreementWorkingDuration))
-                    .setAgreementProject(startContract.plusDays(agreementProjectDuration))
-                    .setAgreementEstimates(startContract.plusDays(agreementEstimatesDuration))
-                    .setExamination(startContract.plusDays(examinationDuration));
+                    .setEngineeringSurvey(workDay(startContract.plusDays(engineeringSurveyDuration)))
+                    .setEngineeringSurveyReport(workDay(startContract.plusDays(engineeringSurveyReportDuration)))
+                    .setAgreementEngineeringSurvey(workDay(startContract.plusDays(agreementEngineeringSurveyDuration)))
+                    .setWorkingFinish(workDay(startContract.plusDays(workingDuration)))
+                    .setEstimatesFinish(workDay(startContract.plusDays(estimatesDuration)))
+                    .setProjectFinish(workDay(startContract.plusDays(projectDuration)))
+                    .setLandFinish(workDay(startContract.plusDays(landDuration)))
+                    .setAgreementWorking(workDay(startContract.plusDays(agreementWorkingDuration)))
+                    .setAgreementProject(workDay(startContract.plusDays(agreementProjectDuration)))
+                    .setAgreementEstimates(workDay(startContract.plusDays(agreementEstimatesDuration)))
+                    .setExamination(workDay(startContract.plusDays(examinationDuration)))
+                    .setHumanFactor(humanFactor);
             System.out.println("Тестовая проверка создания календаря " + calendar);
             if (i==0 && calendarRepository.findCalendarByCodeContract(codeContract).isPresent()){
                 calendarRepository.deleteAll(getCalendarByCode(codeContract));
@@ -111,8 +138,8 @@ public class CalendarService {
      * @param vvp Временная вертолетная площадка
      * @return список сроков проектирования объекта по этапам его строительства
      */
-    public List<Integer> getDurationOilPad(BackfillWell backfillWell, Road road, Line line, Mupn mupn, Vec vec, Vvp vvp) {
-        List<EntityProject> objects = listActiveEntityProject(List.of(backfillWell, road, line, mupn, vec, vvp));
+    public List<Integer> getDurationOilPad(BackfillWell backfillWell, Road road, Line line, Mupn mupn, Vec vec, Vvp vvp, CableRack cableRack, Vjk vjk) {
+        List<EntityProject> objects = listActiveEntityProject(List.of(backfillWell, road, line, mupn, vec, vvp, cableRack, vjk));
 
         List<Integer> durationsProject = new ArrayList<>();
 
@@ -223,9 +250,44 @@ public class CalendarService {
                 } else if (entity.getClass() == Vvp.class) {
                     entity.setObjectType(vvpService.getFirst().getObjectType());
                     objects.add(entity);
+                }else if (entity.getClass() == CableRack.class) {
+                    entity.setObjectType(cableRackService.getFirst().getObjectType());
+                    objects.add(entity);
+                }else if (entity.getClass() == Vjk.class) {
+                    entity.setObjectType(vjkService.getFirst().getObjectType());
+                    objects.add(entity);
                 }
             }
         }
         return objects;
+    }
+
+    /**
+     * Метод, учитывающий выходные и праздничные дни. При попадании даты на выходной, производится перенос на будний день
+     * @param date исходная дата
+     * @return будний день
+     */
+    public LocalDate workDay(LocalDate date){
+        Collection<DayOfWeek> weekends = Arrays.asList(DayOfWeek.SATURDAY, DayOfWeek.SUNDAY);
+        Collection<LocalDate> holidays = new HashSet<>(List.of(
+                LocalDate.of(date.getYear(), 1, 1),
+                LocalDate.of(date.getYear(), 1, 2),
+                LocalDate.of(date.getYear(), 1, 3),
+                LocalDate.of(date.getYear(), 1, 4),
+                LocalDate.of(date.getYear(), 1, 5),
+                LocalDate.of(date.getYear(), 1, 6),
+                LocalDate.of(date.getYear(), 1, 7),
+                LocalDate.of(date.getYear(), 1, 8),
+                LocalDate.of(date.getYear(), 2, 23),
+                LocalDate.of(date.getYear(), 3, 8),
+                LocalDate.of(date.getYear(), 5, 1),
+                LocalDate.of(date.getYear(), 5, 9),
+                LocalDate.of(date.getYear(), 6, 12),
+                LocalDate.of(date.getYear(), 11, 4)));
+
+        while (weekends.contains(date.getDayOfWeek()) || holidays.contains(date)) {
+            date=date.plusDays(1);
+        }
+        return date;
     }
 }

@@ -2,21 +2,28 @@ package ru.tomsknipineft.entities.areaObjects;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.group.GroupSequenceProvider;
+import ru.tomsknipineft.entities.EntityProject;
 import ru.tomsknipineft.entities.ObjectType;
+import ru.tomsknipineft.entities.oilPad.OilPad;
+import ru.tomsknipineft.utils.entityValidator.OnActiveCheck;
+import ru.tomsknipineft.utils.entityValidator.VjkGroupSequenceProvider;
 
 /**
  * ВЖК (вахтовый жилой комплекс)
  */
+@GroupSequenceProvider(VjkGroupSequenceProvider.class)
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "vjks")
-public class Vjk {
+public class Vjk implements OilPad, EntityProject {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,11 +39,12 @@ public class Vjk {
     private Integer capacity;
 
     //    площадь отсыпки, га
-    @Positive(message = "Сan not be less than 0")
+    @NotNull(message = "Площадь не заполнена", groups = OnActiveCheck.class)
+    @Positive(message = "Площадь не может быть отрицательной", groups = OnActiveCheck.class)
     private Long square;
 
     //    этап строительства
-    @Min(value = 1, message = "Сan not be less than 1")
+    @Min(value = 1, message = "Не может быть меньше 1", groups = OnActiveCheck.class)
     private Integer stage;
 
     //    необходимые ресурсы, чел/дней

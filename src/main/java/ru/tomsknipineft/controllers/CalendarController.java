@@ -79,10 +79,11 @@ public class CalendarController {
         }
         List<Integer> durationsProject = calendarService.getDurationOilPad(dataFormOilPad.getBackfillWell(),
                 dataFormOilPad.getRoad(), dataFormOilPad.getLine(),
-                dataFormOilPad.getMupn(), dataFormOilPad.getVec(), dataFormOilPad.getVvp());
+                dataFormOilPad.getMupn(), dataFormOilPad.getVec(), dataFormOilPad.getVvp(), dataFormOilPad.getCableRack(), dataFormOilPad.getVjk());
         LocalDate date = dataFormOilPad.getStartContract();
         this.codeContract = dataFormOilPad.getCodeContract();
-        calendarService.createCalendar(durationsProject, codeContract, date);
+        calendarService.createCalendar(durationsProject, codeContract, date, dataFormOilPad.getHumanFactor(),
+                dataFormOilPad.isTotalEngineeringSurvey(), dataFormOilPad.isEngineeringSurveyReport(), dataFormOilPad.getDrillingRig());
         return "redirect:/oil_pad_object/backfill_well/calendar";
     }
 
