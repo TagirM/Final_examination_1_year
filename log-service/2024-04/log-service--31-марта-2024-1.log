@@ -1,0 +1,284 @@
+2024-03-31T23:17:45.887+0700 INFO info message
+2024-03-31T23:17:45.887+0700 ERROR info message
+2024-03-31T23:17:45.965+0700 INFO info message
+2024-03-31T23:17:45.965+0700 ERROR info message
+2024-03-31T23:17:46.215+0700 INFO HV000001: Hibernate Validator 8.0.1.Final
+2024-03-31T23:17:46.230+0700 INFO Starting Main using Java 19.0.1 with PID 14264 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-03-31T23:17:46.246+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-03-31T23:17:46.283+0700 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-31T23:17:46.283+0700 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-31T23:17:46.814+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T23:17:46.861+0700 INFO Finished Spring Data repository scanning in 42 ms. Found 10 JPA repository interfaces.
+2024-03-31T23:17:47.189+0700 INFO Tomcat initialized with port 8080 (http)
+2024-03-31T23:17:47.189+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-31T23:17:47.189+0700 INFO Starting service [Tomcat]
+2024-03-31T23:17:47.189+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-31T23:17:47.220+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-03-31T23:17:47.220+0700 INFO Root WebApplicationContext: initialization completed in 937 ms
+2024-03-31T23:17:47.251+0700 INFO HikariPool-1 - Starting...
+2024-03-31T23:17:47.298+0700 INFO HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-03-31T23:17:47.298+0700 INFO HikariPool-1 - Start completed.
+2024-03-31T23:17:47.314+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-03-31T23:17:47.408+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T23:17:47.439+0700 INFO HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-31T23:17:47.486+0700 INFO HHH000026: Second-level cache disabled
+2024-03-31T23:17:47.595+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T23:17:47.626+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-31T23:17:48.376+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T23:17:48.423+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T23:17:48.845+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-31T23:17:48.861+0700 INFO Adding welcome page template: index
+2024-03-31T23:17:49.158+0700 INFO LiveReload server is running on port 35729
+2024-03-31T23:17:49.173+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-03-31T23:17:49.189+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-03-31T23:17:49.189+0700 INFO Started Main in 3.209 seconds (process running for 4.097)
+2024-03-31T23:17:53.720+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-31T23:17:53.720+0700 INFO Initializing Servlet 'dispatcherServlet'
+2024-03-31T23:17:53.721+0700 INFO Completed initialization in 0 ms
+2024-03-31T23:17:53.822+0700 INFO Эта запись будет залогирована тоже
+2024-03-31T23:17:53.932+0700 INFO Эта запись будет залогирована
+2024-03-31T23:17:53.934+0700 INFO Эта запись будет залогирована
+2024-03-31T23:17:53.936+0700 INFO Эта запись будет залогирована
+2024-03-31T23:18:59.840+0700 INFO Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-03-31T23:18:59.843+0700 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2024-03-31T23:18:59.854+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T23:18:59.874+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-03-31T23:18:59.874+0700 INFO HikariPool-1 - Shutdown initiated...
+2024-03-31T23:18:59.876+0700 INFO HikariPool-1 - Shutdown completed.
+2024-03-31T23:18:59.934+0700 INFO info message
+2024-03-31T23:18:59.935+0700 ERROR info message
+2024-03-31T23:18:59.965+0700 INFO Starting Main using Java 19.0.1 with PID 14264 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-03-31T23:18:59.966+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-03-31T23:19:00.073+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T23:19:00.090+0700 INFO Finished Spring Data repository scanning in 16 ms. Found 10 JPA repository interfaces.
+2024-03-31T23:19:00.161+0700 INFO Tomcat initialized with port 8080 (http)
+2024-03-31T23:19:00.162+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-31T23:19:00.162+0700 INFO Starting service [Tomcat]
+2024-03-31T23:19:00.162+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-31T23:19:00.172+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-03-31T23:19:00.173+0700 INFO Root WebApplicationContext: initialization completed in 206 ms
+2024-03-31T23:19:00.183+0700 INFO HikariPool-2 - Starting...
+2024-03-31T23:19:00.185+0700 INFO HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2024-03-31T23:19:00.185+0700 INFO HikariPool-2 - Start completed.
+2024-03-31T23:19:00.185+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-03-31T23:19:00.203+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T23:19:00.205+0700 INFO HHH000026: Second-level cache disabled
+2024-03-31T23:19:00.208+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T23:19:00.208+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-31T23:19:00.357+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T23:19:00.374+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T23:19:00.379+0700 WARN Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'calendarController': Resolution of declared constructors on bean Class [ru.tomsknipineft.controllers.CalendarController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@33f5512c] failed
+2024-03-31T23:19:00.379+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T23:19:00.383+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-03-31T23:19:00.383+0700 INFO HikariPool-2 - Shutdown initiated...
+2024-03-31T23:19:00.391+0700 INFO HikariPool-2 - Shutdown completed.
+2024-03-31T23:19:00.393+0700 INFO Stopping service [Tomcat]
+2024-03-31T23:19:00.398+0700 INFO 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-31T23:19:00.413+0700 ERROR Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'calendarController': Resolution of declared constructors on bean Class [ru.tomsknipineft.controllers.CalendarController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@33f5512c] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:383) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1293) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-3.2.2.jar:3.2.2]
+	at ru.tomsknipineft.Main.main(Main.java:20) [classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.2.2.jar:3.2.2]
+Caused by: java.lang.NoClassDefFoundError: ru/tomsknipineft/services/CalendarService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429) ~[?:?]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2608) ~[?:?]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:378) ~[spring-beans-6.1.3.jar:6.1.3]
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: ru.tomsknipineft.services.CalendarService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[?:?]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.2.2.jar:3.2.2]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429) ~[?:?]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2608) ~[?:?]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:378) ~[spring-beans-6.1.3.jar:6.1.3]
+	... 21 more
+2024-03-31T23:19:03.915+0700 INFO info message
+2024-03-31T23:19:03.916+0700 ERROR info message
+2024-03-31T23:19:03.968+0700 INFO Starting Main using Java 19.0.1 with PID 14264 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-03-31T23:19:03.969+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-03-31T23:19:04.127+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T23:19:04.148+0700 INFO Finished Spring Data repository scanning in 21 ms. Found 10 JPA repository interfaces.
+2024-03-31T23:19:04.230+0700 INFO Tomcat initialized with port 8080 (http)
+2024-03-31T23:19:04.231+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-31T23:19:04.232+0700 INFO Starting service [Tomcat]
+2024-03-31T23:19:04.232+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-31T23:19:04.246+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-03-31T23:19:04.246+0700 INFO Root WebApplicationContext: initialization completed in 275 ms
+2024-03-31T23:19:04.258+0700 INFO HikariPool-3 - Starting...
+2024-03-31T23:19:04.262+0700 INFO HikariPool-3 - Added connection conn17: url=jdbc:h2:mem:testdb user=SA
+2024-03-31T23:19:04.262+0700 INFO HikariPool-3 - Start completed.
+2024-03-31T23:19:04.262+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-03-31T23:19:04.283+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T23:19:04.286+0700 INFO HHH000026: Second-level cache disabled
+2024-03-31T23:19:04.289+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T23:19:04.291+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-31T23:19:04.470+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T23:19:04.481+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T23:19:04.779+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-31T23:19:04.787+0700 INFO Adding welcome page template: index
+2024-03-31T23:19:04.877+0700 INFO LiveReload server is running on port 35729
+2024-03-31T23:19:04.888+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-03-31T23:19:04.891+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-03-31T23:19:04.895+0700 INFO Started Main in 0.977 seconds (process running for 79.789)
+2024-03-31T23:19:04.897+0700 INFO Condition evaluation unchanged
+2024-03-31T23:20:16.618+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-31T23:20:16.618+0700 INFO Initializing Servlet 'dispatcherServlet'
+2024-03-31T23:20:16.619+0700 INFO Completed initialization in 0 ms
+2024-03-31T23:20:16.640+0700 INFO Эта запись будет залогирована тоже
+2024-03-31T23:20:16.654+0700 INFO Эта запись будет залогирована
+2024-03-31T23:20:16.655+0700 INFO Эта запись будет залогирована
+2024-03-31T23:20:16.656+0700 INFO Эта запись будет залогирована
+2024-03-31T23:21:23.874+0700 INFO Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-03-31T23:21:23.874+0700 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2024-03-31T23:21:23.874+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T23:21:23.890+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-03-31T23:21:23.890+0700 INFO HikariPool-3 - Shutdown initiated...
+2024-03-31T23:21:23.890+0700 INFO HikariPool-3 - Shutdown completed.
+2024-03-31T23:21:23.952+0700 INFO info message
+2024-03-31T23:21:23.952+0700 ERROR info message
+2024-03-31T23:21:23.999+0700 INFO Starting Main using Java 19.0.1 with PID 14264 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-03-31T23:21:23.999+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-03-31T23:21:24.112+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T23:21:24.128+0700 INFO Finished Spring Data repository scanning in 11 ms. Found 10 JPA repository interfaces.
+2024-03-31T23:21:24.175+0700 INFO Tomcat initialized with port 8080 (http)
+2024-03-31T23:21:24.175+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-31T23:21:24.175+0700 INFO Starting service [Tomcat]
+2024-03-31T23:21:24.175+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-31T23:21:24.190+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-03-31T23:21:24.190+0700 INFO Root WebApplicationContext: initialization completed in 191 ms
+2024-03-31T23:21:24.206+0700 INFO HikariPool-4 - Starting...
+2024-03-31T23:21:24.206+0700 INFO HikariPool-4 - Added connection conn27: url=jdbc:h2:mem:testdb user=SA
+2024-03-31T23:21:24.206+0700 INFO HikariPool-4 - Start completed.
+2024-03-31T23:21:24.206+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-03-31T23:21:24.222+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T23:21:24.222+0700 INFO HHH000026: Second-level cache disabled
+2024-03-31T23:21:24.222+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T23:21:24.222+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-31T23:21:24.331+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T23:21:24.331+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T23:21:24.331+0700 WARN Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'calendarController': Resolution of declared constructors on bean Class [ru.tomsknipineft.controllers.CalendarController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4e0e42ff] failed
+2024-03-31T23:21:24.331+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T23:21:24.347+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-03-31T23:21:24.347+0700 INFO HikariPool-4 - Shutdown initiated...
+2024-03-31T23:21:24.363+0700 INFO HikariPool-4 - Shutdown completed.
+2024-03-31T23:21:24.363+0700 INFO Stopping service [Tomcat]
+2024-03-31T23:21:24.363+0700 INFO 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-31T23:21:24.363+0700 ERROR Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'calendarController': Resolution of declared constructors on bean Class [ru.tomsknipineft.controllers.CalendarController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4e0e42ff] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:383) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1293) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.3.jar:6.1.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) [spring-boot-3.2.2.jar:3.2.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-3.2.2.jar:3.2.2]
+	at ru.tomsknipineft.Main.main(Main.java:20) [classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.2.2.jar:3.2.2]
+Caused by: java.lang.NoClassDefFoundError: ru/tomsknipineft/services/CalendarService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429) ~[?:?]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2608) ~[?:?]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:378) ~[spring-beans-6.1.3.jar:6.1.3]
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: ru.tomsknipineft.services.CalendarService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:495) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:474) ~[?:?]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.2.2.jar:3.2.2]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3429) ~[?:?]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2608) ~[?:?]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:378) ~[spring-beans-6.1.3.jar:6.1.3]
+	... 21 more
+2024-03-31T23:21:26.803+0700 INFO info message
+2024-03-31T23:21:26.803+0700 ERROR info message
+2024-03-31T23:21:26.819+0700 INFO Starting Main using Java 19.0.1 with PID 14264 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-03-31T23:21:26.819+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-03-31T23:21:26.910+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T23:21:26.910+0700 INFO Finished Spring Data repository scanning in 12 ms. Found 10 JPA repository interfaces.
+2024-03-31T23:21:26.973+0700 INFO Tomcat initialized with port 8080 (http)
+2024-03-31T23:21:26.973+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-31T23:21:26.973+0700 INFO Starting service [Tomcat]
+2024-03-31T23:21:26.973+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-31T23:21:26.973+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-03-31T23:21:26.973+0700 INFO Root WebApplicationContext: initialization completed in 154 ms
+2024-03-31T23:21:26.988+0700 INFO HikariPool-5 - Starting...
+2024-03-31T23:21:26.988+0700 INFO HikariPool-5 - Added connection conn31: url=jdbc:h2:mem:testdb user=SA
+2024-03-31T23:21:26.988+0700 INFO HikariPool-5 - Start completed.
+2024-03-31T23:21:26.988+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-03-31T23:21:27.004+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T23:21:27.004+0700 INFO HHH000026: Second-level cache disabled
+2024-03-31T23:21:27.004+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T23:21:27.004+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-31T23:21:27.098+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T23:21:27.098+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T23:21:27.301+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-31T23:21:27.301+0700 INFO Adding welcome page template: index
+2024-03-31T23:21:27.379+0700 INFO LiveReload server is running on port 35729
+2024-03-31T23:21:27.394+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-03-31T23:21:27.394+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-03-31T23:21:27.394+0700 INFO Started Main in 0.591 seconds (process running for 222.299)
+2024-03-31T23:21:27.394+0700 INFO Condition evaluation unchanged
+2024-03-31T23:21:31.246+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-31T23:21:31.246+0700 INFO Initializing Servlet 'dispatcherServlet'
+2024-03-31T23:21:31.247+0700 INFO Completed initialization in 1 ms
+2024-03-31T23:21:31.278+0700 INFO Эта запись будет залогирована тоже
+2024-03-31T23:21:31.292+0700 INFO Эта запись будет залогирована
+2024-03-31T23:21:31.293+0700 INFO Эта запись будет залогирована
+2024-03-31T23:21:31.294+0700 INFO Эта запись будет залогирована
+2024-03-31T23:22:26.310+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T23:22:26.310+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-03-31T23:22:26.310+0700 INFO HikariPool-5 - Shutdown initiated...
+2024-03-31T23:22:26.310+0700 INFO HikariPool-5 - Shutdown completed.

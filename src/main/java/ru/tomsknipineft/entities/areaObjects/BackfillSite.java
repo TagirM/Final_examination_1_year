@@ -29,7 +29,7 @@ public class BackfillSite implements OilPad, EntityProject {
     private ObjectType objectType;
 
     //    площадь отсыпки, га
-    private Long square;
+    private Double square;
 
 //    этап строительства
     private Integer stage;

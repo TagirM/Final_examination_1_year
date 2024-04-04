@@ -41,7 +41,7 @@ public class Vjk implements OilPad, EntityProject {
     //    площадь отсыпки, га
     @NotNull(message = "Площадь не заполнена", groups = OnActiveCheck.class)
     @Positive(message = "Площадь не может быть отрицательной", groups = OnActiveCheck.class)
-    private Long square;
+    private Double square;
 
     //    этап строительства
     @Min(value = 1, message = "Не может быть меньше 1", groups = OnActiveCheck.class)

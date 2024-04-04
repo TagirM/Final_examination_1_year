@@ -11,5 +11,5 @@ public interface VecRepository extends JpaRepository<Vec, Long> {
     /**
     Поиск сущности с мощностью и площадью, соответствующих заданным или ближайшими большими
      */
-    Optional<Vec> findFirstByPowerAndSquareGreaterThanEqual(Integer power, Long square);
+    Optional<Vec> findFirstByPowerAndSquareGreaterThanEqual(Integer power, Double square);
 }

@@ -13,6 +13,6 @@ public interface LineRepository extends JpaRepository<Line, Long> {
     /**
     Поиск сущности с мощностью и протяженностью, соответствующих заданным или ближайшими большими
      */
-    Optional<Line> findFirstByPowerAndLengthGreaterThanEqual(Integer power, Integer length);
+    Optional<Line> findFirstByPowerAndLengthGreaterThanEqual(Integer power, Double length);
 
 }

@@ -41,14 +41,16 @@ public class Road implements OilPad, EntityProject {
     @Column(name = "bridge_exist")
     private boolean bridgeExist;
 
+    // количество мостов
     @Column(name = "bridge_road_count")
     @NotNull(message = "Количество не заполнено", groups = OnActiveBridgeRoad.class)
-    @Positive(message = "Количество не может быть отрицательным", groups = OnActiveBridgeRoad.class)
+    @Positive(message = "Количество не может быть 0 или отрицательным", groups = OnActiveBridgeRoad.class)
     private Integer bridgeRoadCount;
 
+    // общая длина мостов, м
     @Column(name = "bridge_road_length")
     @NotNull(message = "Длина моста не заполнена", groups = OnActiveBridgeRoad.class)
-    @Positive(message = "Длина моста не может быть отрицательной", groups = OnActiveBridgeRoad.class)
+    @Positive(message = "Длина моста не может быть 0 или отрицательной", groups = OnActiveBridgeRoad.class)
     private Integer bridgeRoadLength;
 
     //    категория дороги
@@ -56,10 +58,10 @@ public class Road implements OilPad, EntityProject {
     @Size(min = 1, max = 2, message = "Категория в интервале 1-2 символов", groups = OnActiveCheck.class)
     private String category;
 
-    //    протяженность дороги
+    //    протяженность дороги, км
     @NotNull(message = "Длина не заполнена", groups = OnActiveCheck.class)
-    @Positive(message = "Длина не может быть отрицательной", groups = OnActiveCheck.class)
-    private Integer length;
+    @Positive(message = "Длина не может быть 0 или отрицательной", groups = OnActiveCheck.class)
+    private Double length;
 
     //    этап строительства
     @Min(value = 1, message = "Не может быть меньше 1", groups = OnActiveCheck.class)
@@ -68,12 +70,13 @@ public class Road implements OilPad, EntityProject {
     //    необходимые ресурсы, чел/дней
     private Integer resource;
 
-    public Road(String category, Integer length, Integer resource) {
+    public Road(String category, Double length, Integer resource) {
         this.category = category;
         this.length = length;
         this.resource = resource;
     }
 
+    // расчет необходимых ресурсов для проектирования дорожного моста
     public Integer getResourceBridge(){
         return (bridgeRoadLength/20)*bridgeRoadCount;
     }

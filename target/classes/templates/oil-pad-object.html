@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>КАЛЕНДАРЬ ПРОЕКТА</title>
-</head>
-<body>
-<h1 style="color: darkblue">ДОБРО ПОЖАЛОВАТЬ В СЕРВИС ФОРМИРОВАНИЯ</h1>
-<h1 style="color: darkblue">КАЛЕНДАРНЫХ СРОКОВ ДОГОВОРА!</h1><br>
-<h2>Выберете объект проектирования</h2><br>
-<a th:href="@{/oil_pad_object/backfill_well}"><h3>Инженерная подготовка</h3></a>
-<a th:href="@{/oil_pad_object/oil_well_pad}"><h3>Обустройство кустовой площадки или скважины</h3></a>
-<a th:href="@{/oil_pad_object/reconstruction_oil_well_pad}"><h3>Реконструкция кустовой площадки или скважины</h3></a>
-</body>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{blocks/template.html}">
+<th:block layout:fragment="alert-content">
+    <h2 class="text-primary">ДОБРО ПОЖАЛОВАТЬ В СЕРВИС ФОРМИРОВАНИЯ</h2>
+    <h2 class="text-primary">КАЛЕНДАРНЫХ СРОКОВ ДОГОВОРА!</h2>
+    <br>
+<h3>Выберете объект проектирования</h3><br>
+    <br>
+    <a class="btn btn-outline-secondary" href="/oil_pad_object/backfill_well"><h3>Инженерная подготовка</h3></a><br><br>
+    <a class="btn btn-outline-secondary" href="/oil_pad_object/oil_well_pad"><h3>Обустройство кустовой площадки или скважины</h3></a><br><br>
+    <a class="btn btn-outline-secondary" href="/oil_pad_object/reconstruction_oil_well_pad"><h3>Реконструкция кустовой площадки или скважины</h3></a><br><br>
+</th:block>
 </html>

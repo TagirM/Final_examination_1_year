@@ -2,6 +2,8 @@ package ru.tomsknipineft.controllers;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,7 +17,6 @@ import ru.tomsknipineft.services.CalendarService;
 import java.time.LocalDate;
 import java.util.List;
 
-
 @Controller
 @RequiredArgsConstructor
 public class CalendarController {
@@ -24,6 +25,13 @@ public class CalendarController {
 
     private String codeContract;
 
+    private boolean fieldEngineeringSurvey;
+
+    private boolean engineeringSurveyReport;
+
+    private DataFormOilPad dataFormOilPad;
+
+    private static final Logger logger = LogManager.getLogger(CalendarController.class);
     /**
      * Первоначальная страница приложения с выбором типа объекта проектирования
      */
@@ -82,8 +90,14 @@ public class CalendarController {
                 dataFormOilPad.getMupn(), dataFormOilPad.getVec(), dataFormOilPad.getVvp(), dataFormOilPad.getCableRack(), dataFormOilPad.getVjk());
         LocalDate date = dataFormOilPad.getStartContract();
         this.codeContract = dataFormOilPad.getCodeContract();
+        this.fieldEngineeringSurvey = dataFormOilPad.isFieldEngineeringSurvey();
+        this.engineeringSurveyReport = dataFormOilPad.isEngineeringSurveyReport();
+        if (fieldEngineeringSurvey){
+            engineeringSurveyReport = true;
+        }
         calendarService.createCalendar(durationsProject, codeContract, date, dataFormOilPad.getHumanFactor(),
-                dataFormOilPad.isTotalEngineeringSurvey(), dataFormOilPad.isEngineeringSurveyReport(), dataFormOilPad.getDrillingRig());
+                fieldEngineeringSurvey, engineeringSurveyReport, dataFormOilPad.getDrillingRig());
+        this.dataFormOilPad = dataFormOilPad;
         return "redirect:/oil_pad_object/backfill_well/calendar";
     }
 
@@ -93,9 +107,12 @@ public class CalendarController {
     @GetMapping("/oil_pad_object/backfill_well/calendar")
     public String resultCalendar(Model model){
         List<Calendar> calendars = calendarService.getCalendarByCode(codeContract);
-        System.out.println("Календарь найденный по шифру " + calendars);
+        logger.info("Календарь найденный по шифру " + codeContract + " - " + calendars);
         model.addAttribute("calendars", calendars);
         model.addAttribute("codeContract", codeContract);
+        model.addAttribute("dataFormOilPad", dataFormOilPad);
+        model.addAttribute("fieldEngineeringSurvey", fieldEngineeringSurvey);
+        model.addAttribute("engineeringSurveyReport", engineeringSurveyReport);
         return "result-calendar";
     }
 

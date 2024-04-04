@@ -19,6 +19,7 @@ import ru.tomsknipineft.repositories.CalendarRepository;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.*;
 
 /**
@@ -51,6 +52,7 @@ public class CalendarService {
 
     /**
      * Получение всего списка календарных планов (различных этапов строительства) по шифру договора
+     *
      * @param code шифр договора
      * @return список календарных планов по различным этапам строительства
      */
@@ -64,78 +66,137 @@ public class CalendarService {
      * @param getDurationsProject список продолжительности проектирования всех этапов строительтсва по договору
      * @param codeContract шифр договора
      * @param startContract дата начала работ
+     * @param humanFactor человеческий фактор
+     * @param fieldEngineeringSurvey наличие полевых ИИ
+     * @param engineeringSurveyReport наличие камеральных ИИ
+     * @param drillingRig количество буровых бригад
      */
     public void createCalendar(List<Integer> getDurationsProject, String codeContract, LocalDate startContract, Integer humanFactor,
-                               boolean totalEngineeringSurvey, boolean engineeringSurveyReport, Integer drillingRig) {
+                               boolean fieldEngineeringSurvey, boolean engineeringSurveyReport, Integer drillingRig) {
         int nextStage = 0;
         int engineeringSurveyDuration = 0;
+        int engineeringSurveyLaboratoryResearch = 0;
         int engineeringSurveyReportDuration = 0;
         int agreementEngineeringSurveyDuration = 0;
+        LocalDate finishEngineeringSurveyReport = null;
+        LocalDate finishWorking = null;
+        int stageOffsetII = 0;
+        int stageOffsetPSD = 0;
+        // количество дней необходимых офису для сбора и передачи документации заказчику с учетом всех процедур
+        int projectOfficeDays = 3;
 
-        if (totalEngineeringSurvey && engineeringSurveyReport){
-            engineeringSurveyReport = false;
+        // проверка условия что полный комплекс ИИ выполняется
+        if (fieldEngineeringSurvey) {
+            engineeringSurveyDuration = 10 + 20 / drillingRig;
+            engineeringSurveyLaboratoryResearch = 45;
+            engineeringSurveyReportDuration = engineeringSurveyDuration + engineeringSurveyLaboratoryResearch + 45;
+            agreementEngineeringSurveyDuration = engineeringSurveyReportDuration + 60;
         }
-        if (engineeringSurveyReport){
+        // проверка условия что полевые ИИ не выполняются, а камеральные ИИ выполняются
+        if (!fieldEngineeringSurvey && engineeringSurveyReport) {
             engineeringSurveyReportDuration = 45;
             agreementEngineeringSurveyDuration = engineeringSurveyReportDuration + 60;
         }
-        if (totalEngineeringSurvey){
-            engineeringSurveyDuration = 10 + 20/drillingRig;
-            engineeringSurveyReportDuration = engineeringSurveyDuration + 90;
-            agreementEngineeringSurveyDuration = engineeringSurveyReportDuration + 60;
-        }
-        for (int i = 0; i < getDurationsProject.size(); i++) {
-            // расчет количества рабочих дней с учетом человеческого фактора
-            int durationsProjectWithHumanFactor = (getDurationsProject.get(i) * (humanFactor+100))/100;
 
-            // расчет календарных дней из рабочих дней в каждом этапе строительства
-            int calendarDaysDurationsProject = durationsProjectWithHumanFactor + (durationsProjectWithHumanFactor/5)*2;
+        for (int i = 0; i < getDurationsProject.size(); i++) {
+            // расчет количества рабочих дней РД с учетом человеческого фактора
+            int durationsProjectWithHumanFactor = (getDurationsProject.get(i) * (humanFactor + 100)) / 100 + projectOfficeDays;
+
+            // расчет календарных дней РД из рабочих дней в каждом этапе строительства
+            int calendarDaysDurationsProject = durationsProjectWithHumanFactor + (durationsProjectWithHumanFactor / 5) * 2;
 
             Calendar calendar = new Calendar();
             // смещение начала текущего этапа строительства на срок полевых ИИ предыдущего этапа строительства
             startContract = startContract.plusDays(nextStage);
 
+            //  расчет продолжительности стадий проекта
+            //  срок выдачи РД от начала работ
             int workingDuration = calendarDaysDurationsProject + engineeringSurveyReportDuration;
+            // срок выдачи ПД от начала работ
             int projectDuration = workingDuration + 30;
+            // срок выдачи СД от начала работ
             int estimatesDuration = workingDuration + 30;
+            // срок выдачи ЗУР от начала работ
             int landDuration = projectDuration + 150;
+            // срок согласования РД от начала работ
             int agreementWorkingDuration = workingDuration + 60;
+            // срок согласования ПД от начала работ
             int agreementProjectDuration = projectDuration + 60;
+            // срок согласования СД от начала работ
             int agreementEstimatesDuration = estimatesDuration + 60;
-            int examinationDuration = agreementProjectDuration + 90;
+            // срок ГГЭ ПД от начала работ
+            int examinationDuration = agreementProjectDuration + 120;
 
+            // дата начала отчета ИИ текущего этапа строительства
+            LocalDate startEngineeringSurveyReport = workDay(startContract.plusDays(engineeringSurveyDuration));
+            // проверка условия пересечения выполнения отчета ИИ текущего этапа строительства с предыдущим, если пересечение есть, то срок сместить
+            if (finishEngineeringSurveyReport != null && startEngineeringSurveyReport.plusDays(engineeringSurveyLaboratoryResearch).isBefore(finishEngineeringSurveyReport)) {
+                Period period = Period.between(startEngineeringSurveyReport.plusDays(engineeringSurveyLaboratoryResearch), finishEngineeringSurveyReport);
+                // количество дней смещения
+                stageOffsetII = period.getDays() + period.getMonths() * 30;
+            }
+            // дата окончания отчета ИИ текущего этапа строительства
+            finishEngineeringSurveyReport = workDay(startContract.plusDays(engineeringSurveyReportDuration + stageOffsetII));
+
+            // дата начала РД текущего этапа строительства
+            LocalDate startWorking = workDay(startContract.plusDays(engineeringSurveyReportDuration+ stageOffsetII));
+            // проверка условия пересечения выполнения РД текущего этапа строительства с предыдущим, если пересечение есть, то срок сместить
+            if (finishWorking != null && startWorking.isBefore(finishWorking)) {
+                Period period = Period.between(startWorking, finishWorking);
+                // количество дней смещения
+                stageOffsetPSD = stageOffsetPSD + period.getDays() + period.getMonths() * 30;
+            }
+            // дата окончания РД текущего этапа строительства
+            finishWorking = workDay(startContract.plusDays(workingDuration + stageOffsetII + stageOffsetPSD));
+
+            // формирование календаря проекта
             calendar.setCodeContract(codeContract).setStartContract(workDay(startContract))
-                    .setStage(i+1)
+                    .setStage(i + 1)
                     .setEngineeringSurvey(workDay(startContract.plusDays(engineeringSurveyDuration)))
-                    .setEngineeringSurveyReport(workDay(startContract.plusDays(engineeringSurveyReportDuration)))
-                    .setAgreementEngineeringSurvey(workDay(startContract.plusDays(agreementEngineeringSurveyDuration)))
-                    .setWorkingFinish(workDay(startContract.plusDays(workingDuration)))
-                    .setEstimatesFinish(workDay(startContract.plusDays(estimatesDuration)))
-                    .setProjectFinish(workDay(startContract.plusDays(projectDuration)))
-                    .setLandFinish(workDay(startContract.plusDays(landDuration)))
-                    .setAgreementWorking(workDay(startContract.plusDays(agreementWorkingDuration)))
-                    .setAgreementProject(workDay(startContract.plusDays(agreementProjectDuration)))
-                    .setAgreementEstimates(workDay(startContract.plusDays(agreementEstimatesDuration)))
-                    .setExamination(workDay(startContract.plusDays(examinationDuration)))
+                    .setEngineeringSurveyReport(workDay(startContract.plusDays(engineeringSurveyReportDuration + stageOffsetII)))
+                    .setAgreementEngineeringSurvey(workDay(startContract.plusDays(agreementEngineeringSurveyDuration + stageOffsetII)))
+                    .setWorkingStart(workDay(startContract.plusDays(engineeringSurveyReportDuration + stageOffsetII + stageOffsetPSD)))
+                    .setWorkingFinish(workDay(startContract.plusDays(workingDuration + stageOffsetII + stageOffsetPSD)))
+
+                    .setEstimatesFinish(workDay(startContract.plusDays(estimatesDuration + stageOffsetII + stageOffsetPSD)))
+                    .setProjectFinish(workDay(startContract.plusDays(projectDuration + stageOffsetII + stageOffsetPSD)))
+                    .setLandFinish(workDay(startContract.plusDays(landDuration + stageOffsetII + stageOffsetPSD)))
+                    .setAgreementWorking(workDay(startContract.plusDays(agreementWorkingDuration + stageOffsetII + stageOffsetPSD)))
+                    .setAgreementProject(workDay(startContract.plusDays(agreementProjectDuration + stageOffsetII + stageOffsetPSD)))
+                    .setAgreementEstimates(workDay(startContract.plusDays(agreementEstimatesDuration + stageOffsetII + stageOffsetPSD)))
+                    .setExamination(workDay(startContract.plusDays(examinationDuration + stageOffsetII + stageOffsetPSD)))
                     .setHumanFactor(humanFactor);
-            System.out.println("Тестовая проверка создания календаря " + calendar);
-            if (i==0 && calendarRepository.findCalendarByCodeContract(codeContract).isPresent()){
+            // проверка налчия в базе предыдущих календарей по данному шифру, если есть, то удалить, чтобы не возникало конфликта календарей
+            if (i == 0 && calendarRepository.findCalendarByCodeContract(codeContract).isPresent()) {
                 calendarRepository.deleteAll(getCalendarByCode(codeContract));
             }
             calendarRepository.save(calendar);
-            logger.info("Эта запись будет залогирована");
-            nextStage+=engineeringSurveyDuration;
+            logger.info("Создан новый календарь " + calendar);
+            // обнуление смещения начала работ для следующего этапа строительтсва, чтобы для следующего этапа расчет смещения начался заново
+            nextStage = 0;
+            // расчет смещения начала работ для следующего этапа строительтсва
+            if (fieldEngineeringSurvey) {
+                nextStage += engineeringSurveyDuration;
+            } else if (engineeringSurveyReport) {
+                nextStage += engineeringSurveyReportDuration;
+            } else {
+                nextStage += calendarDaysDurationsProject;
+            }
+            // обнуления количества дней смещения отчета ИИ и РД за счет наложения этапов, для следующего этапа строительства
+            stageOffsetII = 0;
+            stageOffsetPSD = 0;
         }
     }
 
     /**
      * Получение списка сроков проектирования объекта по этапам его строительства
+     *
      * @param backfillWell Кустовая площадка
-     * @param road Автодорога
-     * @param line ЛЭП
-     * @param mupn площадка МУПН
-     * @param vec ВЭЦ
-     * @param vvp Временная вертолетная площадка
+     * @param road         Автодорога
+     * @param line         ЛЭП
+     * @param mupn         площадка МУПН
+     * @param vec          ВЭЦ
+     * @param vvp          Временная вертолетная площадка
      * @return список сроков проектирования объекта по этапам его строительства
      */
     public List<Integer> getDurationOilPad(BackfillWell backfillWell, Road road, Line line, Mupn mupn, Vec vec, Vvp vvp, CableRack cableRack, Vjk vjk) {
@@ -167,7 +228,6 @@ public class CalendarService {
                 }
             }
         }
-        System.out.println(divisionDurationByStage);
         for (int i = 1; i <= stage; i++) {
             durationsProject.add(divisionDurationByStage.get(i));
         }
@@ -176,6 +236,7 @@ public class CalendarService {
 
     /**
      * Получение общего количества этапов строительства всего объекта проектирования по договору
+     *
      * @param entityProjects сооружение (сущность) объекта проектирования
      * @return общее количество этапов строительства объекта
      */
@@ -187,12 +248,13 @@ public class CalendarService {
                 stage = entity.getStage();
             }
         }
-        logger.info("Эта запись будет залогирована тоже");
+        logger.info("Количество этапов в проекте определено и равно " + stage);
         return stage;
     }
 
     /**
      * Получение количества ресурса, необходимого для проектирования сущности (сооружения) всего объекта проектирования
+     *
      * @param oilPad сущность объекта кустовой площадки
      * @return количество ресурса, необходимого для проектирования сущности
      */
@@ -220,6 +282,7 @@ public class CalendarService {
 
     /**
      * Получение списка только активных сущностей (сооружений) объекта проектирования из представления
+     *
      * @param entityProjects сущность (сооружение) объекта проектирования
      * @return список активных сущностей (сооружений)
      */
@@ -228,7 +291,7 @@ public class CalendarService {
         for (EntityProject entity :
                 entityProjects) {
             if (entity.isActive()) {
-                if (entity.getStage()==null){
+                if (entity.getStage() == null) {
                     entity.setStage(1);
                 }
                 if (entity.getClass() == BackfillWell.class) {
@@ -250,10 +313,10 @@ public class CalendarService {
                 } else if (entity.getClass() == Vvp.class) {
                     entity.setObjectType(vvpService.getFirst().getObjectType());
                     objects.add(entity);
-                }else if (entity.getClass() == CableRack.class) {
+                } else if (entity.getClass() == CableRack.class) {
                     entity.setObjectType(cableRackService.getFirst().getObjectType());
                     objects.add(entity);
-                }else if (entity.getClass() == Vjk.class) {
+                } else if (entity.getClass() == Vjk.class) {
                     entity.setObjectType(vjkService.getFirst().getObjectType());
                     objects.add(entity);
                 }
@@ -264,10 +327,11 @@ public class CalendarService {
 
     /**
      * Метод, учитывающий выходные и праздничные дни. При попадании даты на выходной, производится перенос на будний день
+     *
      * @param date исходная дата
      * @return будний день
      */
-    public LocalDate workDay(LocalDate date){
+    public LocalDate workDay(LocalDate date) {
         Collection<DayOfWeek> weekends = Arrays.asList(DayOfWeek.SATURDAY, DayOfWeek.SUNDAY);
         Collection<LocalDate> holidays = new HashSet<>(List.of(
                 LocalDate.of(date.getYear(), 1, 1),
@@ -286,7 +350,7 @@ public class CalendarService {
                 LocalDate.of(date.getYear(), 11, 4)));
 
         while (weekends.contains(date.getDayOfWeek()) || holidays.contains(date)) {
-            date=date.plusDays(1);
+            date = date.plusDays(1);
         }
         return date;
     }

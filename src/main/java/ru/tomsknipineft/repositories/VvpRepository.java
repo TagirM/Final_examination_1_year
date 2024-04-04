@@ -9,5 +9,5 @@ public interface VvpRepository  extends JpaRepository<Vvp, Long> {
     /*
     Поиск сущности с площадью соответствующей заданной или ближайшей большей
      */
-    Optional<Vvp> findFirstBySquareGreaterThanEqual(Long square);
+    Optional<Vvp> findFirstBySquareGreaterThanEqual(Double square);
 }

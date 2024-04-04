@@ -9,5 +9,5 @@ public interface VjkRepository extends JpaRepository<Vjk, Long> {
     /**
      Поиск сущности с площадью, соответствующей заданной или ближайшей большей
      */
-    Optional<Vjk> findFirstBySquareGreaterThanEqual(Long square);
+    Optional<Vjk> findFirstBySquareGreaterThanEqual(Double square);
 }

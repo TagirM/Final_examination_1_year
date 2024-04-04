@@ -54,7 +54,7 @@ public class DataFormOilPad {
     @Valid
     private Vjk vjk = new Vjk();
 
-    private boolean totalEngineeringSurvey;
+    private boolean fieldEngineeringSurvey;
 
     private boolean engineeringSurveyReport;
 

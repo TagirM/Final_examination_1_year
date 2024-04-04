@@ -45,6 +45,8 @@ public class Calendar {
     //    дата согласования отчета ИИ
     private LocalDate agreementEngineeringSurvey;
 
+    //    дата начала разработки РД (рабочей документации)
+    private LocalDate workingStart;
     //    дата выдачи РД (рабочей документации)
     private LocalDate workingFinish;
     //    дата согласования РД

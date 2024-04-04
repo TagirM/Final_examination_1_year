@@ -11,5 +11,5 @@ public interface MupnRepository extends JpaRepository<Mupn, Long> {
     /*
     Поиск сущности с площадью соответствующей заданной или ближайшей большей
      */
-    Optional<Mupn> findFirstBySquareGreaterThanEqual(Long square);
+    Optional<Mupn> findFirstBySquareGreaterThanEqual(Double square);
 }

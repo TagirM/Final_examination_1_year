@@ -1,7 +1,6 @@
 package ru.tomsknipineft.utils.entityValidator;
 
 import org.hibernate.validator.spi.group.DefaultGroupSequenceProvider;
-import ru.tomsknipineft.entities.linearObjects.Line;
 import ru.tomsknipineft.entities.oilPad.DataFormOilPad;
 
 import java.util.ArrayList;
@@ -13,7 +12,7 @@ public class EngineeringSurveyGroupSequenceProvider implements DefaultGroupSeque
         List<Class<?>> groups = new ArrayList<>();
         groups.add(DataFormOilPad.class);
         if (dataFormOilPad != null) {
-            if (dataFormOilPad.isTotalEngineeringSurvey()) {
+            if (dataFormOilPad.isFieldEngineeringSurvey()) {
                 groups.add(OnActiveEngineeringSurvey.class);
             }
         }

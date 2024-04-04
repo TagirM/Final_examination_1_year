@@ -11,5 +11,5 @@ public interface BackfillSiteRepository extends JpaRepository<BackfillSite, Long
     /*
     Поиск сущности с площадью соответствующей заданной или ближайшей большей
      */
-    Optional<BackfillSite> findFirstBySquareGreaterThanEqual(Long squareFromQuery);
+    Optional<BackfillSite> findFirstBySquareGreaterThanEqual(Double squareFromQuery);
 }

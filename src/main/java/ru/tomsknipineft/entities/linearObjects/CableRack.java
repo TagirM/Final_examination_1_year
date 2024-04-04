@@ -35,9 +35,9 @@ public class CableRack implements OilPad, EntityProject {
     @Enumerated(EnumType.STRING)
     private ObjectType objectType;
 
-    //    протяженность эстакады
+    //    протяженность эстакады, м
     @NotNull(message = "Длина не заполнена", groups = OnActiveCheck.class)
-    @Positive(message = "Длина не может быть отрицательной", groups = OnActiveCheck.class)
+    @Positive(message = "Длина не может быть 0 или отрицательной", groups = OnActiveCheck.class)
     private Integer length;
 
     //    этап строительства

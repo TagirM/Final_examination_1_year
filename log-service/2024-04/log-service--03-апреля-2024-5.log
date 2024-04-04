@@ -1,0 +1,320 @@
+2024-04-03T22:16:32.122+0700 INFO info message
+2024-04-03T22:16:32.125+0700 ERROR info message
+2024-04-03T22:16:32.213+0700 INFO info message
+2024-04-03T22:16:32.213+0700 ERROR info message
+2024-04-03T22:16:32.407+0700 INFO HV000001: Hibernate Validator 8.0.1.Final
+2024-04-03T22:16:32.432+0700 INFO Starting Main using Java 19.0.1 with PID 11428 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-04-03T22:16:32.434+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-04-03T22:16:32.616+0700 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-03T22:16:32.616+0700 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-03T22:16:33.070+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-03T22:16:33.115+0700 INFO Finished Spring Data repository scanning in 40 ms. Found 10 JPA repository interfaces.
+2024-04-03T22:16:33.460+0700 INFO Tomcat initialized with port 8080 (http)
+2024-04-03T22:16:33.467+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:16:33.468+0700 INFO Starting service [Tomcat]
+2024-04-03T22:16:33.468+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-04-03T22:16:33.496+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-04-03T22:16:33.496+0700 INFO Root WebApplicationContext: initialization completed in 879 ms
+2024-04-03T22:16:33.534+0700 INFO HikariPool-1 - Starting...
+2024-04-03T22:16:33.603+0700 INFO HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-04-03T22:16:33.604+0700 INFO HikariPool-1 - Start completed.
+2024-04-03T22:16:33.611+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-04-03T22:16:33.702+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-03T22:16:33.735+0700 INFO HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-04-03T22:16:33.756+0700 INFO HHH000026: Second-level cache disabled
+2024-04-03T22:16:33.883+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-03T22:16:33.911+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-03T22:16:34.616+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-03T22:16:34.660+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T22:16:35.145+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-03T22:16:35.158+0700 INFO Adding welcome page template: index
+2024-04-03T22:16:35.396+0700 INFO LiveReload server is running on port 35729
+2024-04-03T22:16:35.412+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:16:35.423+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-04-03T22:16:35.429+0700 INFO Started Main in 3.213 seconds (process running for 3.973)
+2024-04-03T22:16:42.680+0700 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-03T22:16:42.680+0700 INFO Initializing Servlet 'dispatcherServlet'
+2024-04-03T22:16:42.681+0700 INFO Completed initialization in 1 ms
+2024-04-03T22:17:53.454+0700 INFO Restarting due to 2 class path changes (0 additions, 1 deletion, 1 modification)
+2024-04-03T22:17:53.457+0700 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:17:53.465+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T22:17:53.473+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-04-03T22:17:53.474+0700 INFO HikariPool-1 - Shutdown initiated...
+2024-04-03T22:17:53.475+0700 INFO HikariPool-1 - Shutdown completed.
+2024-04-03T22:17:53.514+0700 INFO info message
+2024-04-03T22:17:53.514+0700 ERROR info message
+2024-04-03T22:17:53.556+0700 INFO Starting Main using Java 19.0.1 with PID 11428 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-04-03T22:17:53.556+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-04-03T22:17:53.729+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-03T22:17:53.751+0700 INFO Finished Spring Data repository scanning in 21 ms. Found 10 JPA repository interfaces.
+2024-04-03T22:17:53.844+0700 INFO Tomcat initialized with port 8080 (http)
+2024-04-03T22:17:53.845+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:17:53.846+0700 INFO Starting service [Tomcat]
+2024-04-03T22:17:53.846+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-04-03T22:17:53.862+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-04-03T22:17:53.862+0700 INFO Root WebApplicationContext: initialization completed in 304 ms
+2024-04-03T22:17:53.874+0700 INFO HikariPool-2 - Starting...
+2024-04-03T22:17:53.876+0700 INFO HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2024-04-03T22:17:53.877+0700 INFO HikariPool-2 - Start completed.
+2024-04-03T22:17:53.877+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-04-03T22:17:53.895+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-03T22:17:53.897+0700 INFO HHH000026: Second-level cache disabled
+2024-04-03T22:17:53.900+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-03T22:17:53.901+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-03T22:17:54.036+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-03T22:17:54.045+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T22:17:54.237+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-03T22:17:54.242+0700 INFO Adding welcome page template: index
+2024-04-03T22:17:54.310+0700 INFO LiveReload server is running on port 35729
+2024-04-03T22:17:54.317+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:17:54.320+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-04-03T22:17:54.323+0700 INFO Started Main in 0.805 seconds (process running for 82.867)
+2024-04-03T22:17:54.326+0700 INFO Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   TemplateEngineConfigurations.DefaultTemplateEngineConfiguration#templateEngine matched:
+      - @ConditionalOnMissingBean (types: org.thymeleaf.spring6.ISpringTemplateEngine; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-04-03T22:17:55.752+0700 INFO Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-04-03T22:17:55.753+0700 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:17:55.761+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T22:17:55.767+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-04-03T22:17:55.768+0700 INFO HikariPool-2 - Shutdown initiated...
+2024-04-03T22:17:55.768+0700 INFO HikariPool-2 - Shutdown completed.
+2024-04-03T22:17:55.812+0700 INFO info message
+2024-04-03T22:17:55.812+0700 ERROR info message
+2024-04-03T22:17:55.839+0700 INFO Starting Main using Java 19.0.1 with PID 11428 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-04-03T22:17:55.840+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-04-03T22:17:55.920+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-03T22:17:55.929+0700 INFO Finished Spring Data repository scanning in 9 ms. Found 10 JPA repository interfaces.
+2024-04-03T22:17:55.994+0700 INFO Tomcat initialized with port 8080 (http)
+2024-04-03T22:17:55.995+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:17:55.995+0700 INFO Starting service [Tomcat]
+2024-04-03T22:17:55.996+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-04-03T22:17:56.009+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-04-03T22:17:56.009+0700 INFO Root WebApplicationContext: initialization completed in 168 ms
+2024-04-03T22:17:56.018+0700 INFO HikariPool-3 - Starting...
+2024-04-03T22:17:56.020+0700 INFO HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2024-04-03T22:17:56.020+0700 INFO HikariPool-3 - Start completed.
+2024-04-03T22:17:56.020+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-04-03T22:17:56.033+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-03T22:17:56.034+0700 INFO HHH000026: Second-level cache disabled
+2024-04-03T22:17:56.036+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-03T22:17:56.037+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-03T22:17:56.135+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-03T22:17:56.142+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T22:17:56.345+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-03T22:17:56.350+0700 INFO Adding welcome page template: index
+2024-04-03T22:17:56.411+0700 INFO LiveReload server is running on port 35729
+2024-04-03T22:17:56.417+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:17:56.420+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-04-03T22:17:56.423+0700 INFO Started Main in 0.609 seconds (process running for 84.968)
+2024-04-03T22:17:56.424+0700 INFO Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   TemplateEngineConfigurations.DefaultTemplateEngineConfiguration#templateEngine:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.thymeleaf.spring6.ISpringTemplateEngine; SearchStrategy: all) found beans of type 'org.thymeleaf.spring6.ISpringTemplateEngine' templateEngine (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-04-03T22:19:22.796+0700 INFO Restarting due to 2 class path changes (0 additions, 1 deletion, 1 modification)
+2024-04-03T22:19:22.798+0700 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:19:22.809+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T22:19:22.812+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-04-03T22:19:22.812+0700 INFO HikariPool-3 - Shutdown initiated...
+2024-04-03T22:19:22.813+0700 INFO HikariPool-3 - Shutdown completed.
+2024-04-03T22:19:22.853+0700 INFO info message
+2024-04-03T22:19:22.853+0700 ERROR info message
+2024-04-03T22:19:22.880+0700 INFO Starting Main using Java 19.0.1 with PID 11428 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-04-03T22:19:22.880+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-04-03T22:19:22.976+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-03T22:19:22.992+0700 INFO Finished Spring Data repository scanning in 16 ms. Found 10 JPA repository interfaces.
+2024-04-03T22:19:23.055+0700 INFO Tomcat initialized with port 8080 (http)
+2024-04-03T22:19:23.055+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:19:23.056+0700 INFO Starting service [Tomcat]
+2024-04-03T22:19:23.056+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-04-03T22:19:23.069+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-04-03T22:19:23.069+0700 INFO Root WebApplicationContext: initialization completed in 188 ms
+2024-04-03T22:19:23.078+0700 INFO HikariPool-4 - Starting...
+2024-04-03T22:19:23.080+0700 INFO HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:testdb user=SA
+2024-04-03T22:19:23.080+0700 INFO HikariPool-4 - Start completed.
+2024-04-03T22:19:23.080+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-04-03T22:19:23.093+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-03T22:19:23.095+0700 INFO HHH000026: Second-level cache disabled
+2024-04-03T22:19:23.097+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-03T22:19:23.098+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-03T22:19:23.210+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-03T22:19:23.219+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T22:19:23.421+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-03T22:19:23.427+0700 INFO Adding welcome page template: index
+2024-04-03T22:19:23.507+0700 INFO LiveReload server is running on port 35729
+2024-04-03T22:19:23.515+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:19:23.518+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-04-03T22:19:23.523+0700 INFO Started Main in 0.668 seconds (process running for 172.068)
+2024-04-03T22:19:23.525+0700 INFO Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   TemplateEngineConfigurations.DefaultTemplateEngineConfiguration#templateEngine matched:
+      - @ConditionalOnMissingBean (types: org.thymeleaf.spring6.ISpringTemplateEngine; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-04-03T22:19:25.956+0700 INFO Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-04-03T22:19:25.958+0700 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:19:25.966+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T22:19:25.968+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-04-03T22:19:25.968+0700 INFO HikariPool-4 - Shutdown initiated...
+2024-04-03T22:19:25.968+0700 INFO HikariPool-4 - Shutdown completed.
+2024-04-03T22:19:26.019+0700 INFO info message
+2024-04-03T22:19:26.019+0700 ERROR info message
+2024-04-03T22:19:26.052+0700 INFO Starting Main using Java 19.0.1 with PID 11428 (E:\MyJob\calendar_api\target\classes started by Тагир in E:\MyJob\calendar_api)
+2024-04-03T22:19:26.052+0700 INFO No active profile set, falling back to 1 default profile: "default"
+2024-04-03T22:19:26.142+0700 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-03T22:19:26.155+0700 INFO Finished Spring Data repository scanning in 13 ms. Found 10 JPA repository interfaces.
+2024-04-03T22:19:26.223+0700 INFO Tomcat initialized with port 8080 (http)
+2024-04-03T22:19:26.224+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:19:26.224+0700 INFO Starting service [Tomcat]
+2024-04-03T22:19:26.225+0700 INFO Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-04-03T22:19:26.235+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-04-03T22:19:26.235+0700 INFO Root WebApplicationContext: initialization completed in 182 ms
+2024-04-03T22:19:26.243+0700 INFO HikariPool-5 - Starting...
+2024-04-03T22:19:26.245+0700 INFO HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:testdb user=SA
+2024-04-03T22:19:26.245+0700 INFO HikariPool-5 - Start completed.
+2024-04-03T22:19:26.245+0700 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-04-03T22:19:26.259+0700 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-03T22:19:26.261+0700 INFO HHH000026: Second-level cache disabled
+2024-04-03T22:19:26.263+0700 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-03T22:19:26.264+0700 WARN HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-03T22:19:26.374+0700 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-03T22:19:26.387+0700 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T22:19:26.597+0700 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-03T22:19:26.600+0700 INFO Adding welcome page template: index
+2024-04-03T22:19:26.673+0700 INFO LiveReload server is running on port 35729
+2024-04-03T22:19:26.680+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-04-03T22:19:26.684+0700 INFO Tomcat started on port 8080 (http) with context path ''
+2024-04-03T22:19:26.688+0700 INFO Started Main in 0.667 seconds (process running for 175.233)
+2024-04-03T22:19:26.689+0700 INFO Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   TemplateEngineConfigurations.DefaultTemplateEngineConfiguration#templateEngine:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.thymeleaf.spring6.ISpringTemplateEngine; SearchStrategy: all) found beans of type 'org.thymeleaf.spring6.ISpringTemplateEngine' templateEngine (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-04-03T22:19:29.875+0700 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T22:19:29.876+0700 WARN Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: База данных уже закрыта (чтобы отключить автоматическое закрытие базы данных при останове JVM, добавьте ";DB_CLOSE_ON_EXIT=FALSE" в URL)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-04-03T22:19:29.876+0700 INFO HikariPool-5 - Shutdown initiated...
+2024-04-03T22:19:29.876+0700 INFO HikariPool-5 - Shutdown completed.

@@ -37,13 +37,13 @@ public class Line implements OilPad, EntityProject {
 
     //    мощность ВЛ (или габариты ВЛ)
     @NotNull(message = "Мощность не заполнена", groups = OnActiveCheck.class)
-    @Positive(message = "Сan not be less than 0", groups = OnActiveCheck.class)
+    @Positive(message = "Сan not be 0 or less than 0", groups = OnActiveCheck.class)
     private Integer power;
 
-    //    протяженность эстакады
+    //    протяженность ЛЭП, км
     @NotNull(message = "Длина не заполнена", groups = OnActiveCheck.class)
-    @Positive(message = "Сan not be less than 0", groups = OnActiveCheck.class)
-    private Integer length;
+    @Positive(message = "Сan not be 0 or less than 0", groups = OnActiveCheck.class)
+    private Double length;
 
     //    этап строительства
     @Min(value = 1, message = "Сan not be less than 1", groups = OnActiveCheck.class)

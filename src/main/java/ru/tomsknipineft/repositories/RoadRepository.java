@@ -12,5 +12,5 @@ public interface RoadRepository extends JpaRepository<Road, Long> {
     /*
     Поиск сущности с категорией и протяженностью соответствующих заданным или ближайшими большими
      */
-    Optional<Road> findFirstByCategoryAndLengthGreaterThanEqual(String category, Integer length);
+    Optional<Road> findFirstByCategoryAndLengthGreaterThanEqual(String category, Double length);
 }
